@@ -83,10 +83,30 @@
 	<input type="submit" value="Gönder" />
 </form>
 <h3>
-	@ViewBag.BirinciYontem
+	@ViewBag.Yontem1
 </h3>
 @ViewBag.Mesaj
 <hr />
-@ViewBag.MesajListe
+@ViewData["MesajListe"]
 <hr />
 @TempData["TData"]
+<hr />
+
+<h3>
+	@ViewBag.Yontem2
+</h3>
+@ViewBag.Mesaj2
+<hr />
+@ViewData["MesajListe2"]
+<hr />
+@TempData["TData2"]
+<hr />
+
+<h3>
+	@ViewBag.Yontem3
+</h3>
+@ViewBag.Mesaj3
+<hr />
+@ViewData["MesajListe3"]
+<hr />
+@TempData["TData3"]
