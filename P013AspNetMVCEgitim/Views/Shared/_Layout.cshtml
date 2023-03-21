@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/P013AspNetMVCEgitim.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("OzelCss", required: false)
 </head>
 <body>
     <header>
@@ -34,6 +35,35 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="MVC04ModelBinding" asp-action="Index">Model Binding</a>
                         </li>
+                       
+
+
+
+
+                        <li class="dropdown">
+                            <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Model Validation
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/MVC05ModelValidation">Model Validation</a></li>
+                                <li><a class="dropdown-item" href="/MVC05ModelValidation/UyeListesi">Üye Listesi</a></li>
+                                <li><a class="dropdown-item" href="/MVC05ModelValidation/YeniUye">Yeni Üye Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+
+                        <li class="dropdown">
+                            <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Diğer Konular
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/MVC06Section">MVC06 Section</a></li>
+                                <li><a class="dropdown-item" href="/MVC07Partial">MVC07 Partial</a></li>
+                                <li><a class="dropdown-item" href="/MVC08ViewResults">MVC08 View Results</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">İletişim</a>
                         </li>
@@ -51,6 +81,7 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - P013AspNetMVCEgitim - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @await RenderSectionAsync("OzelIcerik", required: false) @*Mvc section tarafında yazdığımız OzelIcerik Section sayfada görünmesi için rendersection ekledik.*@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
